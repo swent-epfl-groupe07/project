@@ -68,8 +68,8 @@ Having this is essential for managing collaborative work, and it will significan
 
 **6. Set up Figma :**
 You will use Figma to create mockups and track design work
-- [ ] Create a Figma project and share it with the entire team
-- [ ] Link the Figma file from your project's README
+- [x] Create a Figma project and share it with the entire team
+- [x] Link the Figma file from your project's README
 - [ ] Ensure all team members have edit access and can access Figma in dev mode
 - [ ] Ensure your Figma is publicly accessible, so that the course staff have access to it
 
