@@ -23,10 +23,10 @@ To ensure smooth collaboration throughout the semester, you need to have a relia
 
 **2. Set up GitHub :**
 GitHub provides many tools to help manage your project efficiently. Do the following to set it up (we let you research how to do these things):
-- [ ] Create a GitHub organization with all team members, your coaches, and Prof. Candea (GitHub ID _candea_).
-- [ ] Create a project repository; make sure it's public, so that you can use tools like SonarCloud for free.
+- [x] Create a GitHub organization with all team members, your coaches, and Prof. Candea (GitHub ID _candea_).
+- [x] Create a project repository; make sure it's public, so that you can use tools like SonarCloud for free.
 - [ ] Grant _Maintainer_ access to your coaches, so they can give you the right level of help.
-- [ ] Set up branch protection rules:
+- [x] Set up branch protection rules:
      - No direct push to `main`
      - Require pull request reviews with at least one reviewer
      - Require status checks before merging (e.g., Android tests)
