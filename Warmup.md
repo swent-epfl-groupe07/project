@@ -33,8 +33,8 @@ GitHub provides many tools to help manage your project efficiently. Do the follo
 - [ ] Add the description of your app to the README of the new repository.
 
 **3. Initialize the Project :**
-- [ ] Initialize the Android project in GitHub (you can use our [sample Android project](https://github.com/swent-epfl/Android-Sample) as a starting point, or your own bootcamp).
-- [ ] Add a `.gitignore` for Android projects.
+- [x] Initialize the Android project in GitHub (you can use our [sample Android project](https://github.com/swent-epfl/Android-Sample) as a starting point, or your own bootcamp).
+- [x] Add a `.gitignore` for Android projects.
 - [ ] Make sure all team members can clone the repository and run this new project locally.
 - [ ] Set up Firebase, including API keys (but keep them out of the repository [using .env](https://firebase.google.com/docs/functions/config-env?gen=2nd#params)).
 
