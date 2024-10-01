@@ -30,7 +30,7 @@ GitHub provides many tools to help manage your project efficiently. Do the follo
      - No direct push to `main`
      - Require pull request reviews with at least one reviewer
      - Require status checks before merging (e.g., Android tests)
-- [ ] Add the description of your app to the README of the new repository.
+- [x] Add the description of your app to the README of the new repository.
 
 **3. Initialize the Project :**
 - [x] Initialize the Android project in GitHub (you can use our [sample Android project](https://github.com/swent-epfl/Android-Sample) as a starting point, or your own bootcamp).
