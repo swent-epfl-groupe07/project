@@ -17,9 +17,9 @@ We recommend that you have a brief meeting with your team during the last bootca
 
 **1. Set up Team Communication :**
 To ensure smooth collaboration throughout the semester, you need to have a reliable way to communicate with your team members and coaches.
-- [ ] Join the SwEnt Discord using the invitation link posted on Moodle. You can use Discord to communicate with your coaches as well as with other students.
-- [ ] Join your group by going to the groups channel and clicking the emoji that corresponds to your group's number.
-- [ ] If any of your team members are not present on Discord, contact them and remind them to join.
+- [x] Join the SwEnt Discord using the invitation link posted on Moodle. You can use Discord to communicate with your coaches as well as with other students.
+- [x] Join your group by going to the groups channel and clicking the emoji that corresponds to your group's number.
+- [x] If any of your team members are not present on Discord, contact them and remind them to join.
 
 **2. Set up GitHub :**
 GitHub provides many tools to help manage your project efficiently. Do the following to set it up (we let you research how to do these things):
