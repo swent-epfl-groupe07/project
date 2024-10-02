@@ -63,8 +63,8 @@ Having this is essential for managing collaborative work, and it will significan
      - *My Tasks* : personalized view showing tasks assigned to each individual
 
 **5. Set up your CI :**
-- [ ] Set up a CI pipeline to run tests on your repository
-- [ ] Integrate [SonarCloud](https://www.sonarsource.com/plans-and-pricing/sonarcloud/) for code quality checks. This service is free for public repositories
+- [x] Set up a CI pipeline to run tests on your repository
+- [x] Integrate [SonarCloud](https://www.sonarsource.com/plans-and-pricing/sonarcloud/) for code quality checks. This service is free for public repositories
 
 **6. Set up Figma :**
 You will use Figma to create mockups and track design work
