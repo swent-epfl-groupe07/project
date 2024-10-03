@@ -40,14 +40,14 @@ GitHub provides many tools to help manage your project efficiently. Do the follo
 
 **4. Set up a Scrum Board :**
 Having this is essential for managing collaborative work, and it will significantly boost your team's efficiency. Here are our suggestions:
-- [ ] Create a project in your GitHub org to manage your Scrum board.
-- [ ] Add the following columns to your board:
+- [x] Create a project in your GitHub org to manage your Scrum board.
+- [x] Add the following columns to your board:
      - `Product Backlog` for the user stories that define your application
      - `Sprint Backlog` for the tasks to be completed during the current Sprint
      - `In Development` for the tasks that are currently being worked on
      - `In Review` for the tasks under review by other team members before being merged
      - `Done in Si` for tasks completed in Sprint _i_, where _i = 1, 2, ..., 11_.
-- [ ] Define properties for tasks on the Scrum board:
+- [x] Define properties for tasks on the Scrum board:
      - `Sprint` to identify the sprint to which that task belongs
      - `Type` (e.g., Frontend, Backend, Figma)
      - `Priority` (e.g. P0, P1, P2)
@@ -56,7 +56,7 @@ Having this is essential for managing collaborative work, and it will significan
      - `Assignee` to identify who is responsible for the task
      - `Estimated Time` where you will put your best guess as to how many person-hours it will take to complete the task
      - `Actual Time` for recording the time it effectively took to complete the task
-- [ ] Create several views for your Scrum board:
+- [x] Create several views for your Scrum board:
      - *Global* : overview of all tasks across all Sprints
      - *Sprint* : view focused on the current Sprint's backlog and tasks
      - *Planning* : view for Sprint planning, with backlogs and user stories filtered
