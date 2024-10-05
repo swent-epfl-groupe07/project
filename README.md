@@ -1,6 +1,6 @@
 # project
 
-See the figma design [here](https://www.figma.com/files/project/284546509)
+See the figma design [here](https://www.figma.com/team_invite/redeem/Afl7aNWvQYdQ7eYX3Ms4yy)
 
 ## description
 Introducing EduVerse, the ultimate educational app designed to elevate your learning experience. Whether you’re tackling difficult subjects or simply looking to make studying more efficient and enjoyable, EduVerse is here to support you every step of the way.
