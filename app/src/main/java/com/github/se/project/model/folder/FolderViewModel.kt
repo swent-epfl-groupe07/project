@@ -32,16 +32,16 @@ class FolderViewModel(repository: FolderRepository): ViewModel() {
                 -it.creationTime.timeInMillis
             }
             FilterTypes.ACCESS_RECENT -> activeFolder?.pdfFiles?.value?.sortBy {
-                it.lastAccess.timeInMillis
-            }
-            FilterTypes.ACCESS_OLD -> activeFolder?.pdfFiles?.value?.sortBy {
                 -it.lastAccess.timeInMillis
             }
+            FilterTypes.ACCESS_OLD -> activeFolder?.pdfFiles?.value?.sortBy {
+                it.lastAccess.timeInMillis
+            }
             FilterTypes.ACCESS_MOST -> activeFolder?.pdfFiles?.value?.sortBy {
-                it.numberAccess
+                -it.numberAccess
             }
             FilterTypes.ACCESS_LEAST -> activeFolder?.pdfFiles?.value?.sortBy {
-                -it.numberAccess
+                it.numberAccess
             }
             else -> throw NotImplementedError("The sort method is not up-to-date")
         }
