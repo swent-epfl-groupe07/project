@@ -14,8 +14,8 @@ class Folder(
 class MyFile(
     val name: String,
     val creationTime: Calendar,
-    val lastAccess: Calendar,
-    val numberAccess: Int
+    var lastAccess: Calendar,
+    var numberAccess: Int
 )
 
 
