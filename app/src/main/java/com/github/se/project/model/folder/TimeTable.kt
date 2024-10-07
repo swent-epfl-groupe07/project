@@ -39,9 +39,16 @@ class TimeTable {
     }
 
 
-    @Composable
-    fun TimeTableComposable() {
-
+    /**
+     * Check if indicated moment is selected.
+     * @param day the day in which we check. Monday=1, sunday=7
+     * @param hour the hour to check. Go from 7 to 20
+     * @return true if selected, false otherwise
+     * @throws IllegalArgumentException arguments are not in required range
+     */
+    fun isSelected(day: Int, hour: Int): Boolean {
+        checkValidTime(day, hour)
+        return selected[day][hour-firstHour]
     }
 }
 
