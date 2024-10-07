@@ -22,7 +22,7 @@ class TimeTable {
      */
     fun selectSlot(day: Int, hour: Int) {
         checkValidTime(day, hour)
-        selected[day][hour-firstHour] = true
+        selected[day-1][hour-firstHour] = true
     }
 
 
@@ -35,7 +35,7 @@ class TimeTable {
      */
     fun unselectSlot(day: Int, hour: Int) {
         checkValidTime(day, hour)
-        selected[day][hour-firstHour] = false
+        selected[day-1][hour-firstHour] = false
     }
 
 
@@ -48,7 +48,7 @@ class TimeTable {
      */
     fun isSelected(day: Int, hour: Int): Boolean {
         checkValidTime(day, hour)
-        return selected[day][hour-firstHour]
+        return selected[day-1][hour-firstHour]
     }
 }
 
