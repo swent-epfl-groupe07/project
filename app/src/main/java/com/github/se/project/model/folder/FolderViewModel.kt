@@ -15,7 +15,7 @@ class FolderViewModel(repository: FolderRepository): ViewModel() {
             }
     }*/
 
-    val existingFolders: List<Folder> = repository.getFolders()
+    val existingFolders: MutableList<Folder> = repository.getFolders().toMutableList()
     var activeFolder: Folder? = null
 
     /**
@@ -45,5 +45,22 @@ class FolderViewModel(repository: FolderRepository): ViewModel() {
             }
             else -> throw NotImplementedError("The sort method is not up-to-date")
         }
+    }
+
+    /**
+     * Add a folder to the list of existing folders.
+     * @param folder the folder to add
+     */
+    fun addFolder(folder: Folder) {
+        existingFolders.add(folder)
+    }
+
+    /**
+     * Remove a folder from the list of existing folders.
+     * @param folder the folder to remove
+     */
+    fun deleteFolder(folder: Folder) {
+        existingFolders.remove(folder)
+        if (activeFolder == folder) activeFolder = null
     }
 }
