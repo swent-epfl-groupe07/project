@@ -18,6 +18,10 @@ class FolderViewModel(repository: FolderRepository): ViewModel() {
     val existingFolders: List<Folder> = repository.getFolders()
     var activeFolder: Folder? = null
 
+    /**
+     * Sort the array of files of the active folder.
+     * @param filter the filter to apply, as defined in enum FilterTypes in model/folder/Folder.kt
+     */
     fun sortBy(filter: FilterTypes) {
         when (filter) {
             FilterTypes.NAME -> activeFolder?.pdfFiles?.value?.sortBy { it.name }
@@ -39,6 +43,7 @@ class FolderViewModel(repository: FolderRepository): ViewModel() {
             FilterTypes.ACCESS_LEAST -> activeFolder?.pdfFiles?.value?.sortBy {
                 -it.numberAccess
             }
+            else -> throw NotImplementedError("The sort method is not up-to-date")
         }
     }
 }
