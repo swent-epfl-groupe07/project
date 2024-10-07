@@ -2,10 +2,10 @@ package com.github.se.project.model.folder
 
 import androidx.compose.runtime.Composable
 
-private val daysInWeek = 7
-private val firstHour = 7
-private val lastHour = 21
-private val hoursInDay = lastHour - firstHour
+private const val daysInWeek = 7
+private const val firstHour = 7
+private const val lastHour = 21
+private const val hoursInDay = lastHour - firstHour
 
 
 class TimeTable {
