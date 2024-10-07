@@ -1,10 +1,11 @@
 package com.github.se.project.model.folder
 
 import com.github.se.project.model.widget.Widget
+import kotlinx.coroutines.flow.MutableStateFlow
 import java.util.Calendar
 
 class Folder(
-    val pdfFiles: List<MyFile>,
+    val pdfFiles: MutableStateFlow<MutableList<MyFile>>,
     val name: String,
     val timeTable: TimeTable
 ): Widget
