@@ -38,3 +38,6 @@ upload-keystore.jks
 
 # MacOS
 **/.DS_Store
+
+#commit message
+commit_msg.txt
