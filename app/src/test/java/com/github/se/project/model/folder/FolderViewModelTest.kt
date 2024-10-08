@@ -45,8 +45,14 @@ class FolderViewModelTest {
                   }
                 }),
             "folder",
+            "1",
             TimeTable())
-    folder2 = Folder(MutableStateFlow(emptyList<MyFile>().toMutableList()), "folder2", TimeTable())
+    folder2 = Folder(
+      MutableStateFlow(emptyList<MyFile>().toMutableList()),
+      "folder2",
+      "2",
+      TimeTable()
+    )
 
     folderRepository = MockFolderRepository(folder)
     folderViewModel = FolderViewModel(folderRepository)
@@ -69,6 +75,32 @@ class FolderViewModelTest {
     assertEquals(folderViewModel.existingFolders.size, 1)
     assertSame(folderViewModel.existingFolders[0], folder2)
     assertNull(folderViewModel.activeFolder)
+  }
+
+  @Test
+  fun updateFolderTest() {
+    folderViewModel.activeFolder = folder
+    val folder3 = Folder(
+      MutableStateFlow(emptyList<MyFile>().toMutableList()),
+      "folder3",
+      "1",
+      TimeTable()
+    )
+    folderViewModel.updateFolder(folder3)
+    assertSame(folderViewModel.activeFolder, folder3)
+    assertEquals(folderViewModel.existingFolders.size, 1)
+    assertSame(folderViewModel.existingFolders[0], folder3)
+
+    val folder4 = Folder(
+      MutableStateFlow(emptyList<MyFile>().toMutableList()),
+      "folder4",
+      folderViewModel.getNewUid(),
+      TimeTable()
+    )
+    assertEquals(folder4.id, "id test")
+    folderViewModel.updateFolder(folder4)
+    assertEquals(folderViewModel.existingFolders.size, 2)
+    assertSame(folderViewModel.existingFolders[1], folder4)
   }
 
   @Test
@@ -117,5 +149,18 @@ class MockFolderRepository(private val folder: Folder) : FolderRepository {
     return List(1) {
       return@List folder
     }
+  }
+
+  override fun addFolder(folder: Folder) {
+  }
+
+  override fun updateFolder(folder: Folder) {
+  }
+
+  override fun deleteFolder(folder: Folder) {
+  }
+
+  override fun getNewUid(): String {
+    return "id test"
   }
 }
