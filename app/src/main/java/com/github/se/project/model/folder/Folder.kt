@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 class Folder(
     val pdfFiles: MutableStateFlow<MutableList<MyFile>>,
     val name: String,
+    val id: String,
     val timeTable: TimeTable
 ) : Widget
 

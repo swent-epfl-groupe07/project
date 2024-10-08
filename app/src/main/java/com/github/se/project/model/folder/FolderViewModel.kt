@@ -2,7 +2,7 @@ package com.github.se.project.model.folder
 
 import androidx.lifecycle.ViewModel
 
-class FolderViewModel(repository: FolderRepository) : ViewModel() {
+class FolderViewModel(val repository: FolderRepository) : ViewModel() {
   // TODO
   /*companion object {
       val Factory: ViewModelProvider.Factory =
@@ -45,6 +45,7 @@ class FolderViewModel(repository: FolderRepository) : ViewModel() {
    */
   fun addFolder(folder: Folder) {
     existingFolders.add(folder)
+    repository.addFolder(folder)
   }
 
   /**
@@ -55,5 +56,29 @@ class FolderViewModel(repository: FolderRepository) : ViewModel() {
   fun deleteFolder(folder: Folder) {
     existingFolders.remove(folder)
     if (activeFolder == folder) activeFolder = null
+    repository.deleteFolder(folder)
+  }
+
+  /**
+   * Update a folder in the list of existing folders.
+   * If it doesn't exist, create it.
+   *
+   * @param folder the folder to update
+   */
+  fun updateFolder(folder: Folder) {
+    try {
+      existingFolders[existingFolders.indexOfFirst { it.id == folder.id }] = folder
+      repository.updateFolder(folder)
+    } catch (_: IndexOutOfBoundsException) {
+      addFolder(folder)
+    }
+  }
+
+  /**
+   * Get new ID for a folder.
+   *
+   */
+  fun getNewUid(): String {
+    return repository.getNewUid()
   }
 }
