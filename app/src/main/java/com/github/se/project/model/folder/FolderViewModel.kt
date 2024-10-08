@@ -68,6 +68,7 @@ class FolderViewModel(val repository: FolderRepository) : ViewModel() {
   fun updateFolder(folder: Folder) {
     try {
       existingFolders[existingFolders.indexOfFirst { it.id == folder.id }] = folder
+      if(activeFolder?.id == folder.id) activeFolder = folder
       repository.updateFolder(folder)
     } catch (_: IndexOutOfBoundsException) {
       addFolder(folder)
